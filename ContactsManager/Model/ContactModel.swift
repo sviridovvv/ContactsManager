@@ -39,8 +39,14 @@ class ContactModel {
                                      phoneNumber: phoneNumber,
                                      email: email))
     }
-    
-    func getContacts() -> [ContactModelItem] {
-        return contacts
+}
+
+protocol ContactModelProtocol {
+    func getContactModel() -> ContactModelProtocol
+}
+
+extension ContactModel: ContactModelProtocol {
+    func getContactModel() -> ContactModelProtocol {
+        return ContactModel()
     }
 }
