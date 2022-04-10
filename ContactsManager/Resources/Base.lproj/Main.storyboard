@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts-->
+        <!--My contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContactsManager" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,11 +61,26 @@
                             <outlet property="tableView" destination="jQm-Kb-5yF" id="8bn-dS-sUF"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="X0Y-2Q-yOg"/>
+                    <navigationItem key="navigationItem" title="My contacts" id="X0Y-2Q-yOg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="79.6875"/>
+            <point key="canvasLocation" x="781" y="80"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iUm-6g-XWH">
+            <objects>
+                <viewController id="ag0-Tp-mXN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EhN-rQ-SEs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eQv-V8-jG2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bk-fu-g43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1499" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrm-UM-7ov">
@@ -76,7 +91,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
