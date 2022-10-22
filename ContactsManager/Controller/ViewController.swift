@@ -21,20 +21,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
-        let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: nil, action: #selector(done))
-        self.navigationItem.rightBarButtonItem = addItem
-        self.navigationItem.rightBarButtonItem?.tintColor = .red
     }
-    
+
     func configure() {
-        
+
+        let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(done))
+        self.navigationItem.rightBarButtonItem = addItem
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
+        self.navigationItem.backButtonTitle = ""
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: AppFonts.titleFont
+        ]
+
         contacts = contactModel?.contacts ?? nil
         contactView.tableView.dataSource = self
         contactView.tableView.delegate = self
     }
-    
+
     @objc func done() {
-        print("asdfas")
+        guard let addNewConactVC = self.storyboard?.instantiateViewController(withIdentifier: "addNewContact") as? AddNewContactVC else { return }
+        self.navigationController?.pushViewController(addNewConactVC, animated: true)
     }
 }
 
