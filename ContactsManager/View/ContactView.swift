@@ -8,6 +8,6 @@
 import UIKit
 
 class ContactView: UIView {
-    
+
     @IBOutlet weak var tableView: UITableView!
 }

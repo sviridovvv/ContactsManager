@@ -8,7 +8,7 @@
 import Foundation
 
 class ContactModel {
-    
+
     var contacts: [ContactModelItem] = [ContactModelItem(firstName: "Violetta",
                                                  lastName: "Mayhem",
                                                  phoneNumber: "+79093412332",
@@ -29,7 +29,7 @@ class ContactModel {
                                                  lastName: "Cute",
                                                  phoneNumber: "+79995246833",
                                                  email: "future@mail.com")]
-    
+
     func addNewContact(firstName: String,
                        lastName: String,
                        phoneNumber: String,

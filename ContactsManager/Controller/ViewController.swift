@@ -23,12 +23,13 @@ class ViewController: UIViewController {
         configure()
     }
 
-    func configure() {
+    private func configure() {
 
         let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(done))
         self.navigationItem.rightBarButtonItem = addItem
         self.navigationItem.rightBarButtonItem?.tintColor = .black
         self.navigationItem.backButtonTitle = ""
+        self.navigationItem.title = "My contacts"
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: AppFonts.titleFont
@@ -49,16 +50,16 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts?.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.contactView.tableView.dequeueReusableCell(withIdentifier: "ContactCell") as! ContactViewCell
-        
+
         cell.tag = indexPath.row
         guard let contacts = self.contacts else { return cell }
         if contacts.indices.contains(indexPath.row) && cell.tag == indexPath.row {
             cell.configure(item: contacts[indexPath.row])
         }
-        
+
         return cell
     }
 }
